@@ -1,5 +1,8 @@
 package ms.jiren.sigescom.business.repository.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,7 +11,9 @@ import lombok.*;
 @Setter
 @Builder
 @NoArgsConstructor
+@ToString
 @AllArgsConstructor
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class SaleDetail {
 
     @Id
